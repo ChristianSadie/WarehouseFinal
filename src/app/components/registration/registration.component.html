@@ -1,0 +1,72 @@
+<!-- Registration form for new users -->
+
+<form #signupForm="ngForm" (ngSubmit)="onSubmit()">
+
+  <!-- Form with labels and inputs -->
+
+  <div class="container">
+
+    <!-- Name -->
+    <label class="lbl" for="name">Name</label>
+    <input class="inbox" type="name" name="name" placeholder="Enter name" required [(ngModel)]="registrationDetails.name">
+    <br>
+
+    <!-- Surname -->
+    <label class="lbl" for="surname">Surname</label>
+    <input class="inbox" type="surname" name="surname" placeholder="Enter surname" required [(ngModel)]="registrationDetails.surname">
+    <br>
+
+    <!-- Username -->
+    <label class="lbl" for="username">Username</label>
+    <input class="inbox" type="username" name="username" placeholder="Enter username" required [(ngModel)]="username">
+    <br>
+
+    <!-- ID number -->
+    <label class="lbl" for="id">ID</label>
+    <input class="inbox" type="id" name="id" placeholder="Enter ID" required [(ngModel)]="registrationDetails.id">
+    <br>
+
+    <!-- Email address -->
+    <label class="lbl" for="inputEmail">Email address</label>
+    <input class="inbox" type="email" name="inputEmail" placeholder="Enter email" required [(ngModel)]="registrationDetails.email">
+    <br>
+
+    <!-- Email validation -->
+    <label class="lbl" for="confirmEmail">Confirm email address</label>
+    <input class="inbox" type="email" name="confirmEmail" placeholder="Confirm email" required [(ngModel)]="confirmEmail">
+    <br>
+
+    <!-- Password -->
+    <label class="lbl" for="inputPassword">Password</label>
+    <input class="inbox" type="password" name="inputPassword" placeholder="Enter password" required [(ngModel)]="registrationDetails.password">
+    <br>
+
+    <!-- Password validation -->
+    <label class="lbl" for="confirmPassword">Confirm password</label>
+    <input class="inbox" type="password" name="confirmPassword" placeholder="Confirm password" required [(ngModel)]="confirmPassword">
+    <br>
+
+    <!-- Role: admin/cashier -->
+    <label class="lbl" for="roles">Role</label>
+    <br>
+    <select class="inbox" name="role" required [(ngModel)]="registrationDetails.role">
+      <option value="" selected disabled hidden>Choose role</option>
+      <option value="admin">Admin</option>
+      <option value="cashier">Cashier</option>
+    </select>
+
+    <!-- Sign up button with alignment from div classes linked to css -->
+
+    <div class="sc">
+
+      <div class="vc">
+
+        <button type="submit" class="btn btn-outline-info" [disabled]="!signupForm.form.valid">Sign up</button>
+      
+      </div>
+    
+    </div>
+
+  </div>
+
+</form>

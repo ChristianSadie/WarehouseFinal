@@ -1,0 +1,44 @@
+<!-- Add product form for logged in user -->
+
+<form #addProdForm="ngForm" (ngSubmit)="onAdd()">
+
+    <div class="container">
+
+        <!-- Product name -->
+        <label for="prodName" class="lbl">Add product name</label>
+        <input type="text" class="inbox" name="prodName" placeholder="Product name" required [(ngModel)]="product.name">
+        <br>
+
+        <!-- Product category -->
+        <label for="category" class="lbl">Choose product category</label>
+        <select class="inbox" name="category" required [(ngModel)]="product.category">
+            <option value="" selected disabled hidden>Choose category</option>
+            <option value="food">Food</option>
+            <option value="clothes">Clothes</option>
+            <option value="medicine">Medicine</option>
+            <option value="household">Household</option>
+        </select>
+        <br>
+
+        <!-- Product quantity -->
+        <label for="quantity" class="lbl">Add quantity (Max 100 units)</label>
+        <input type="number" class="inbox" name="quantity" placeholder="Quantity" min="1" max="100" required
+            [(ngModel)]="product.quantity">
+        <br>
+        <br>
+
+        <!-- Add product button with linked css -->
+
+        <div class="sc">
+
+            <div class="vc">
+
+                <button type="submit" class="btn btn-outline-info" [disabled]="!addProdForm.form.valid">Add product</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+</form>

@@ -1,10 +1,10 @@
 # Warehouse
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+This project is done for Matogen during Dec 2020 - Jan 2021.
 
-## Development server
+## Supervisor
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Dima Visser
 
 ## Code scaffolding
 

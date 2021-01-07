@@ -1,0 +1,35 @@
+<!-- Product table with relevant info -->
+
+<table class="table table-hover table-striped">
+
+  <thead>
+
+    <tr>
+
+      <!-- Table headings -->
+      <th scope="col" [hidden]="!roleAdmin"></th>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Created by</th>
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let row of tableRows">
+
+      <!-- Displayed product info , delete button only for admins -->
+      <td [hidden]="!roleAdmin"><button type="submit" class="btn btn-outline-info" (click)="onDeleteProduct(row.name)">Delete</button></td>
+      <td>{{row.name}}</td>
+      <td>{{row.category}}</td>
+      <td>{{row.quantity}}</td>
+      <td>{{row.createdBy}}</td>
+
+    </tr>
+
+  </tbody>
+  
+</table>

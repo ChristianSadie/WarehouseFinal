@@ -1,0 +1,34 @@
+<!-- Profile for logged in user displaying and editing user info -->
+
+<form #editProfileForm='ngForm' (ngSubmit)="onEdit()">
+
+    <div class="container">
+
+        <h2 class="lbl">Edit:</h2>
+        <br>
+
+        <!-- Name -->
+        <label class="lbl" for="name">Name</label>
+        <input class="inbox" type="name" name="name" placeholder={{currentName}} [(ngModel)]="edits.name">
+        <br>
+
+        <!-- Email -->
+        <label class="lbl" for="email">Email</label>
+        <input class="inbox" type="email" name="email" placeholder={{currentEmail}} [(ngModel)]="edits.email">
+        <br>
+
+    </div>
+
+    <!-- Submit edited user info -->
+    
+    <div class="sc">
+
+        <div class="vc">
+
+            <button type="submit" class="btn btn-outline-info">Submit edit</button>
+
+        </div>
+
+    </div>
+    
+</form>

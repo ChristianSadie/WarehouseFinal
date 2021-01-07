@@ -1,0 +1,12 @@
+.img-responsive {
+   height: auto;
+   width: auto ;
+   max-width: 250px;
+   max-height: 72px;
+}
+.img-responsive:hover {
+    transform: rotate(35deg);
+    transition: .3s;
+}
+
+

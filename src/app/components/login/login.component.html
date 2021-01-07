@@ -1,0 +1,46 @@
+<!-- Login form for existing users -->
+
+<form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+
+  <div class="container">
+
+    <!-- Username -->
+    <label class="lbl" for="uname">Username</label>
+    <input class="inbox" type="text" placeholder="Enter Username" name="uname" required [(ngModel)]='logindetails.username'>
+    <br>
+
+    <!-- Password -->
+    <label class="lbl" for="psw">Password</label>
+    <input class="inbox" type="password" placeholder="Enter Password" name="psw" required [(ngModel)]='logindetails.password'>
+    <br>
+
+    <!-- Login button with linked css -->
+    <div class="sc">
+
+      <div class="vc">
+
+        <button type="submit" class="btn btn-outline-info" [disabled]="!loginForm.form.valid">Login</button>
+
+      </div>
+
+    </div>
+
+    <!-- Remember me button -->
+    <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+    <br>
+    <br>
+
+  </div>
+
+  <!-- Button linking to sign up page -->
+  <div class="container">
+
+    <small>Don't have an account?</small>
+    <br>
+    <ul>
+      <li routerLinkActive="active"><a routerLink="/signup"><button type="button" id="signUp" class="btn btn-outline-info">Sign up</button></a></li>
+    </ul>
+
+  </div>
+  
+</form>
