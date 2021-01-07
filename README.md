@@ -6,7 +6,6 @@ Matogen
 
 Dima Visser
 
-## Code scaffolding
+## Duration
 
-Duration: 4 weeks
-Dec 2020 - Jan 2021
+4 weeks: Dec 2020 - Jan 2021
